@@ -1,0 +1,78 @@
+{
+  "model_id": "uci_wdbc_gradient_boosting_902f700d",
+  "version": "1.0.0",
+  "algorithm": "gradient_boosting",
+  "artifact_file": "uci_wdbc_gradient_boosting_902f700d.joblib",
+  "selected_features": [
+    "perimeter_worst",
+    "area_worst",
+    "radius_worst",
+    "concave_points_mean",
+    "concave_points_worst",
+    "perimeter_mean",
+    "concavity_mean",
+    "radius_mean",
+    "area_mean",
+    "area_se"
+  ],
+  "num_features": 10,
+  "hyperparameters": {
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "max_depth": 3
+  },
+  "test_metrics": {
+    "accuracy": 0.9561,
+    "precision": 0.9744,
+    "recall_sensitivity": 0.9048,
+    "specificity": 0.9861,
+    "f1_score": 0.9383,
+    "balanced_accuracy": 0.9454,
+    "roc_auc": 0.9947,
+    "pr_auc": 0.9912,
+    "matthews_corr_coef": 0.9058,
+    "log_loss_score": 0.1136,
+    "brier_score": 0.0359,
+    "confusion_matrix": [
+      [
+        71,
+        1
+      ],
+      [
+        4,
+        38
+      ]
+    ],
+    "confidence_intervals": {
+      "accuracy": {
+        "lower": 0.9123,
+        "upper": 0.9825,
+        "confidence_level": 0.95
+      },
+      "recall_sensitivity": {
+        "lower": 0.8059,
+        "upper": 0.9756,
+        "confidence_level": 0.95
+      },
+      "roc_auc": {
+        "lower": 0.9856,
+        "upper": 0.9997,
+        "confidence_level": 0.95
+      }
+    }
+  },
+  "training_config": {
+    "algorithm": "gradient_boosting",
+    "dataset_id": "uci_wdbc",
+    "target_column": "diagnosis",
+    "selected_features": null,
+    "test_size": 0.2,
+    "random_state": 42,
+    "resampling": "none",
+    "hyperparameters": {},
+    "tuning_strategy": "none",
+    "tuning_trials": 15,
+    "cv_folds": 3
+  },
+  "file_size_kb": 39.72
+}

@@ -1,0 +1,36 @@
+# ==============================================================================
+# CANCERWISE AI — Local Development Docker Compose Override
+# Mounts host code repositories directly for real-time live reloading
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  backend:
+    command: ["python", "-m", "uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    environment:
+      - PROJECT_ENV=development
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ./backend:/app/backend
+      - ./data_mining:/app/data_mining
+      - ./preprocessing:/app/preprocessing
+      - ./feature_engineering:/app/feature_engineering
+      - ./explainability:/app/explainability
+      - ./evaluation:/app/evaluation
+      - ./configs:/app/configs
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./logs:/app/logs
+
+  frontend:
+    command: ["streamlit", "run", "frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.runOnSave=true"]
+    environment:
+      - PROJECT_ENV=development
+    volumes:
+      - ./frontend:/app/frontend
+      - ./backend:/app/backend:ro
+      - ./data:/app/data:ro
+      - ./models:/app/models:ro
+      - ./reports:/app/reports

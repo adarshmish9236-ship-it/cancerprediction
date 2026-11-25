@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "uci_ml_repository",
+    "name": "UCI Machine Learning Repository",
+    "url": "https://archive.ics.uci.edu",
+    "license_type": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+    "supported_modalities": [
+      "TABULAR"
+    ],
+    "cancer_cohorts": [
+      "Wisconsin Diagnostic Breast Cancer",
+      "Cervical Cancer Risk",
+      "Haberman's Survival"
+    ],
+    "trust_level": "High (Peer-Reviewed Academic)"
+  },
+  {
+    "source_id": "tcga_gdc",
+    "name": "The Cancer Genome Atlas (NCI GDC)",
+    "url": "https://portal.gdc.cancer.gov",
+    "license_type": "Open Access NIH Genomic Data Sharing Policy",
+    "supported_modalities": [
+      "GENOMIC",
+      "TABULAR",
+      "IMAGE"
+    ],
+    "cancer_cohorts": [
+      "TCGA-BRCA",
+      "TCGA-LUAD",
+      "TCGA-COAD"
+    ],
+    "trust_level": "Clinical/Genomic Gold Standard"
+  },
+  {
+    "source_id": "breakhis_database",
+    "name": "Breast Cancer Histopathological Database (BreakHis)",
+    "url": "https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/",
+    "license_type": "Academic Non-Commercial Research License",
+    "supported_modalities": [
+      "IMAGE"
+    ],
+    "cancer_cohorts": [
+      "Microscopic Biopsy Slides (40X - 400X)"
+    ],
+    "trust_level": "Peer-Reviewed Pathological Benchmark"
+  }
+]

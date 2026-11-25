@@ -1,0 +1,43 @@
+{
+  "dataset_id": "histopathology_breakhis_connector",
+  "name": "Breast Cancer Histopathology (H&E Biopsy Images)",
+  "description": "Microscopic biopsy image manifest and patch dataset connector covering 40X-400X H&E images.",
+  "original_source": "BreakHis / Clinical Pathology Repository",
+  "source_url": "https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/",
+  "download_timestamp": "2026-11-22T04:07:00.024141",
+  "license": "Non-Commercial Research Use",
+  "records_count": 2,
+  "columns_count": 6,
+  "target_variable": "diagnosis",
+  "target_classes": [
+    "Benign",
+    "Malignant"
+  ],
+  "target_type": "BINARY_CLASSIFICATION",
+  "feature_names": [
+    "slide_id",
+    "magnification",
+    "subtype",
+    "pathology_notes"
+  ],
+  "missing_values_count": 0,
+  "modality": "IMAGE",
+  "data_format": "IMAGE_DIRECTORY",
+  "version": "1.0.0",
+  "sha256_checksum": "83e1a8ad85069d210a028967d1e30aadda3f2e794e51bd557133e1695468ad87",
+  "raw_file_path": "E:\\PROJECTS\\DATA MINING\\CANCERWISE_AI\\data\\raw\\histopathology_manifest.json",
+  "processed_file_path": "E:\\PROJECTS\\DATA MINING\\CANCERWISE_AI\\data\\processed\\histopathology_breakhis_connector.parquet",
+  "provenance": {
+    "staining": "Hematoxylin & Eosin",
+    "biomedical_type": "Microscopic Tissue Histopathology",
+    "incompatible_with": "Direct feature-level concatenation with tabular clinical records"
+  },
+  "schema_definition": {
+    "slide_id": "str",
+    "magnification": "str",
+    "diagnosis": "str",
+    "subtype": "str",
+    "patient_id": "str",
+    "pathology_notes": "str"
+  }
+}

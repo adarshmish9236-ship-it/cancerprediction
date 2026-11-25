@@ -1,0 +1,128 @@
+{
+  "model_id": "uci_wdbc_logistic_regression_59b19070",
+  "version": "1.0.0",
+  "algorithm": "logistic_regression",
+  "artifact_file": "uci_wdbc_logistic_regression_59b19070.joblib",
+  "selected_features": [
+    "radius_mean",
+    "texture_mean",
+    "perimeter_mean",
+    "area_mean",
+    "smoothness_mean",
+    "compactness_mean",
+    "concavity_mean",
+    "concave_points_mean",
+    "symmetry_mean",
+    "fractal_dimension_mean",
+    "radius_se",
+    "texture_se",
+    "perimeter_se",
+    "area_se",
+    "smoothness_se",
+    "compactness_se",
+    "concavity_se",
+    "concave_points_se",
+    "symmetry_se",
+    "fractal_dimension_se",
+    "radius_worst",
+    "texture_worst",
+    "perimeter_worst",
+    "area_worst",
+    "smoothness_worst",
+    "compactness_worst",
+    "concavity_worst",
+    "concave_points_worst",
+    "symmetry_worst",
+    "fractal_dimension_worst",
+    "circularity_index_mean",
+    "sphericity_mean",
+    "nuclear_irregularity_mean",
+    "border_roughness_mean",
+    "radius_expansion_ratio",
+    "area_expansion_ratio",
+    "perimeter_expansion_ratio",
+    "concavity_expansion_ratio",
+    "concave_points_expansion_ratio",
+    "perimeter_to_area_mean",
+    "perimeter_to_area_worst",
+    "perimeter_to_area_se",
+    "ratio_worst_to_mean_radius_worst",
+    "ratio_worst_to_mean_texture_worst",
+    "ratio_worst_to_mean_perimeter_worst",
+    "ratio_worst_to_mean_area_worst",
+    "ratio_worst_to_mean_smoothness_worst",
+    "ratio_worst_to_mean_compactness_worst",
+    "ratio_worst_to_mean_concavity_worst",
+    "ratio_worst_to_mean_concave_points_worst",
+    "ratio_worst_to_mean_symmetry_worst",
+    "ratio_worst_to_mean_fractal_dimension_worst",
+    "mean_morphology_composite_mean",
+    "mean_morphology_composite_max",
+    "mean_morphology_composite_std",
+    "se_morphology_composite_mean",
+    "se_morphology_composite_max",
+    "se_morphology_composite_std",
+    "worst_morphology_composite_mean",
+    "worst_morphology_composite_max",
+    "worst_morphology_composite_std"
+  ],
+  "num_features": 61,
+  "hyperparameters": {
+    "C": 1.0,
+    "max_iter": 1000
+  },
+  "test_metrics": {
+    "accuracy": 0.9825,
+    "precision": 0.9762,
+    "recall_sensitivity": 0.9762,
+    "specificity": 0.9861,
+    "f1_score": 0.9762,
+    "balanced_accuracy": 0.9812,
+    "roc_auc": 0.9974,
+    "pr_auc": 0.996,
+    "matthews_corr_coef": 0.9623,
+    "log_loss_score": 0.0648,
+    "brier_score": 0.0175,
+    "confusion_matrix": [
+      [
+        71,
+        1
+      ],
+      [
+        1,
+        41
+      ]
+    ],
+    "confidence_intervals": {
+      "accuracy": {
+        "lower": 0.9561,
+        "upper": 1.0,
+        "confidence_level": 0.95
+      },
+      "recall_sensitivity": {
+        "lower": 0.9177,
+        "upper": 1.0,
+        "confidence_level": 0.95
+      },
+      "roc_auc": {
+        "lower": 0.9902,
+        "upper": 1.0,
+        "confidence_level": 0.95
+      }
+    }
+  },
+  "training_config": {
+    "algorithm": "logistic_regression",
+    "dataset_id": "uci_wdbc",
+    "target_column": "diagnosis",
+    "selected_features": null,
+    "test_size": 0.2,
+    "random_state": 42,
+    "resampling": "none",
+    "hyperparameters": {},
+    "tuning_strategy": "none",
+    "tuning_trials": 15,
+    "cv_folds": 3
+  },
+  "file_size_kb": 3.64
+}

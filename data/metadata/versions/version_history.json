@@ -1,0 +1,332 @@
+{
+  "uci_wdbc": [
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:06:59.997145",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:16:22.626145",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:17:03.962155",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:17:34.008619",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:17:52.021618",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:30:16.882427",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:39:36.532724",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T05:06:17.876232",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T05:16:51.602388",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T05:24:12.126535",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T06:33:06.625589",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T06:34:08.798262",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T06:48:42.315222",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:15:57.578756",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:22:16.703154",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:39:07.820857",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:09:10.053756",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:21:52.833888",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T10:08:38.058748",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T10:32:21.444278+00:00",
+      "checksum": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "records_count": 569,
+      "columns_count": 32,
+      "changelog": "Initial ingestion"
+    }
+  ],
+  "histopathology_breakhis_connector": [
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:07:00.029300",
+      "checksum": "83e1a8ad85069d210a028967d1e30aadda3f2e794e51bd557133e1695468ad87",
+      "records_count": 2,
+      "columns_count": 6,
+      "changelog": "Initial ingestion"
+    }
+  ],
+  "tcga_brca_genomic_connector": [
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T04:07:00.059661",
+      "checksum": "5ec9539dc44ca50bb06317c9db10f05185c9bc6990f1e3f699e3bb384142e320",
+      "records_count": 4,
+      "columns_count": 13,
+      "changelog": "Initial ingestion"
+    }
+  ],
+  "temp_phase9_test": [
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:19:23.775002",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:21:17.165681",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:33:18.599831",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:36:23.342093",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:37:57.109278",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:31:28.184927",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:34:24.603274",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:35:39.258739",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T09:43:39.755126",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T10:09:36.854339",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T10:12:18.486074+00:00",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T10:33:18.493865+00:00",
+      "checksum": "f1a86eab7c8b16174f85ad03c2c1ce799a573bb9807bfcf01519784ca1514201",
+      "records_count": 3,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    }
+  ],
+  "hop1_test_cohort": [
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:51:19.597326",
+      "checksum": "b79b771725f9137eb97cb914123aefc762407b8ab934ed19ae48c64912c7ede4",
+      "records_count": 4,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T07:59:16.541871",
+      "checksum": "b79b771725f9137eb97cb914123aefc762407b8ab934ed19ae48c64912c7ede4",
+      "records_count": 4,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:03:57.791637",
+      "checksum": "b79b771725f9137eb97cb914123aefc762407b8ab934ed19ae48c64912c7ede4",
+      "records_count": 4,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:06:39.327087",
+      "checksum": "b79b771725f9137eb97cb914123aefc762407b8ab934ed19ae48c64912c7ede4",
+      "records_count": 4,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:09:43.397098",
+      "checksum": "b79b771725f9137eb97cb914123aefc762407b8ab934ed19ae48c64912c7ede4",
+      "records_count": 4,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    },
+    {
+      "version": "1.0.0",
+      "timestamp": "2026-11-22T08:26:34.072276",
+      "checksum": "b79b771725f9137eb97cb914123aefc762407b8ab934ed19ae48c64912c7ede4",
+      "records_count": 4,
+      "columns_count": 4,
+      "changelog": "Initial ingestion"
+    }
+  ]
+}

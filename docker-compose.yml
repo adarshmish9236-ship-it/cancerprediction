@@ -1,0 +1,105 @@
+# ==============================================================================
+# CANCERWISE AI — Production Docker Compose Orchestration
+# Manages multi-container microservice topology: Backend API + Frontend Dashboard
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. FastAPI Backend API Service
+  # ----------------------------------------------------------------------------
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: cancerwise-ai-backend:1.0.0
+    container_name: cancerwise_backend
+    restart: unless-stopped
+    command: ["python", "-m", "uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    environment:
+      - PROJECT_ENV=production
+      - LOG_LEVEL=INFO
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - MLFLOW_TRACKING_URI=sqlite:////app/experiments/mlruns/mlflow.db
+      - MLFLOW_EXPERIMENT_NAME=cancerwise_governance
+      - DATA_RAW_PATH=/app/data/raw
+      - DATA_PROCESSED_PATH=/app/data/processed
+    volumes:
+      - cancerwise_data:/app/data
+      - cancerwise_models:/app/models
+      - cancerwise_experiments:/app/experiments
+      - cancerwise_logs:/app/logs
+      - cancerwise_reports:/app/reports
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 20s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - cancerwise_network
+
+  # ----------------------------------------------------------------------------
+  # 2. Streamlit Scientific Frontend Dashboard
+  # ----------------------------------------------------------------------------
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: cancerwise-ai-frontend:1.0.0
+    container_name: cancerwise_frontend
+    restart: unless-stopped
+    command: ["streamlit", "run", "frontend/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    environment:
+      - PROJECT_ENV=production
+      - API_BASE_URL=http://backend:8000/api/v1
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+    volumes:
+      - cancerwise_data:/app/data:ro
+      - cancerwise_models:/app/models:ro
+      - cancerwise_reports:/app/reports:ro
+      - cancerwise_logs:/app/logs
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 25s
+      timeout: 10s
+      retries: 3
+      start_period: 25s
+    networks:
+      - cancerwise_network
+
+# ------------------------------------------------------------------------------
+# Persistent Volume Storage
+# ------------------------------------------------------------------------------
+volumes:
+  cancerwise_data:
+    driver: local
+  cancerwise_models:
+    driver: local
+  cancerwise_experiments:
+    driver: local
+  cancerwise_logs:
+    driver: local
+  cancerwise_reports:
+    driver: local
+
+# ------------------------------------------------------------------------------
+# Isolated Internal Network
+# ------------------------------------------------------------------------------
+networks:
+  cancerwise_network:
+    driver: bridge

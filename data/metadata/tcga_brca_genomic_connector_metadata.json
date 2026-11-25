@@ -1,0 +1,62 @@
+{
+  "dataset_id": "tcga_brca_genomic_connector",
+  "name": "TCGA-BRCA RNA-seq & Intrinsic Molecular Subtypes",
+  "description": "Normalized gene expression values for breast cancer driver oncogenes with PAM50 intrinsic subtype classification.",
+  "original_source": "The Cancer Genome Atlas (NCI GDC)",
+  "source_url": "https://portal.gdc.cancer.gov/projects/TCGA-BRCA",
+  "download_timestamp": "2026-11-22T04:07:00.053903",
+  "license": "Open Access / NIH Data Sharing Policy",
+  "records_count": 4,
+  "columns_count": 13,
+  "target_variable": "pam50_subtype",
+  "target_classes": [
+    "Luminal A",
+    "Luminal B",
+    "HER2-enriched",
+    "Basal-like",
+    "Normal-like"
+  ],
+  "target_type": "MULTICLASS_CLASSIFICATION",
+  "feature_names": [
+    "case_id",
+    "sample_type",
+    "vital_status",
+    "BRCA1",
+    "BRCA2",
+    "TP53",
+    "PIK3CA",
+    "ERBB2",
+    "ESR1",
+    "PGR",
+    "PTEN",
+    "MKI67"
+  ],
+  "missing_values_count": 0,
+  "modality": "GENOMIC",
+  "data_format": "PARQUET",
+  "version": "1.0.0",
+  "sha256_checksum": "5ec9539dc44ca50bb06317c9db10f05185c9bc6990f1e3f699e3bb384142e320",
+  "raw_file_path": "E:\\PROJECTS\\DATA MINING\\CANCERWISE_AI\\data\\raw\\tcga_brca_expression_sample.csv",
+  "processed_file_path": "E:\\PROJECTS\\DATA MINING\\CANCERWISE_AI\\data\\processed\\tcga_brca_genomic_connector.parquet",
+  "provenance": {
+    "cohort": "TCGA-BRCA",
+    "sequencing_technology": "Illumina HiSeq RNA-Seq",
+    "normalization": "log2(TPM + 1)",
+    "modality_note": "High-dimensional transcriptomic measurements. Cannot be simply row-concatenated with morphology."
+  },
+  "schema_definition": {
+    "case_id": "str",
+    "sample_type": "str",
+    "pam50_subtype": "str",
+    "vital_status": "str",
+    "BRCA1": "float64",
+    "BRCA2": "float64",
+    "TP53": "float64",
+    "PIK3CA": "float64",
+    "ERBB2": "float64",
+    "ESR1": "float64",
+    "PGR": "float64",
+    "PTEN": "float64",
+    "MKI67": "float64"
+  }
+}

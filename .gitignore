@@ -1,0 +1,118 @@
+# ==============================================================================
+# CANCERWISE AI — Git Ignore Configuration
+# Strict isolation of environments, secrets, large artifacts, and runtime logs
+# ==============================================================================
+
+# --- Python Bytecode & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual Environments ---
+venv/
+env/
+ENV/
+.venv/
+.env/
+env.bak/
+venv.bak/
+
+# --- Environment Secrets & Credentials ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+secrets/
+id_rsa
+id_rsa.pub
+
+# --- Large Datasets & Raw Acquisition Files ---
+data/raw/*
+data/interim/*
+data/external/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/external/.gitkeep
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# --- Serialized Models & Deep Learning Checkpoints ---
+models/trained/*.joblib
+models/trained/*.pt
+models/trained/*.pth
+models/checkpoints/*
+!models/trained/.gitkeep
+!models/checkpoints/.gitkeep
+!models/registry/.gitkeep
+!models/governance/.gitkeep
+
+# --- MLflow & Experiment Tracking Artifacts ---
+experiments/mlruns/*
+!experiments/mlruns/.gitkeep
+experiments/*.db
+experiments/artifacts/*
+mlruns/
+
+# --- Logs & Runtime Telemetry ---
+logs/*.log
+logs/*.jsonl
+logs/*.log.*
+!logs/.gitkeep
+
+# --- Publication Reports & Generated Visuals ---
+reports/eda/*.html
+reports/evaluation/*.html
+reports/evaluation/*.md
+reports/*.pdf
+!reports/.gitkeep
+
+# --- IDEs & System Metadata ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# --- Testing & Code Quality Tools ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+chrome_profile/

@@ -1,0 +1,310 @@
+{
+  "dataset_id": "uci_wdbc",
+  "dataset_name": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+  "source": "UCI Machine Learning Repository",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "target_variable": "diagnosis",
+  "target_semantics": {
+    "Benign": {
+      "clinical_code": "B",
+      "meaning": "Non-cancerous, non-invasive cellular growth. Cell nuclei maintain organized architecture without cytological features of malignancy.",
+      "stage_relevance": "N/A (Benign lesions are not staged)"
+    },
+    "Malignant": {
+      "clinical_code": "M",
+      "meaning": "Carcinomatous, cytologically malignant cells displaying marked pleomorphism, high nuclear area, irregular contours, and chromatin condensation.",
+      "stage_relevance": "Diagnostic confirmation only. Tumor stage (TNM: T1-T4, N0-N3, M0-M1) must be determined through histopathology, surgical margins, and distant staging scans."
+    }
+  },
+  "clinical_warning": "Diagnostic labels (Benign / Malignant) indicate cytopathological classification of malignancy. They must NOT be confused with cancer stages (Stage 0 - Stage IV).",
+  "imaging_modality": "Fine Needle Aspirate (FNA) digitized cytological nuclear microscopy",
+  "attributes": [
+    {
+      "column_name": "id",
+      "clinical_name": "Patient / Sample Identifier",
+      "data_type": "int64",
+      "role": "identifier",
+      "unit": "nominal ID",
+      "description": "Unique anonymized identification number corresponding to the patient aspirate sample."
+    },
+    {
+      "column_name": "diagnosis",
+      "clinical_name": "Cytological Diagnosis",
+      "data_type": "string",
+      "role": "target",
+      "unit": "categorical",
+      "values": ["Benign", "Malignant"],
+      "description": "Pathologist-confirmed clinical diagnostic label for the fine needle aspirate."
+    },
+    {
+      "column_name": "radius_mean",
+      "clinical_name": "Cell Nucleus Radius (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "micrometers (μm)",
+      "computation": "Mean of distances from the center of the cell nucleus to perimeter points.",
+      "clinical_relevance": "Malignant nuclei are typically significantly larger (nuclear enlargement / macro-karyosis)."
+    },
+    {
+      "column_name": "texture_mean",
+      "clinical_name": "Nuclear Texture (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "grayscale variance",
+      "computation": "Standard deviation of gray-scale pixel values within the nuclear boundary.",
+      "clinical_relevance": "Quantifies chromatin clumpiness and nuclear hyperchromasia typical of cancer."
+    },
+    {
+      "column_name": "perimeter_mean",
+      "clinical_name": "Nuclear Perimeter (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "micrometers (μm)",
+      "computation": "Mean perimeter length bounding the segmented cell nuclei.",
+      "clinical_relevance": "Measures nuclear size and circumferential irregularity."
+    },
+    {
+      "column_name": "area_mean",
+      "clinical_name": "Nuclear Area (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "square micrometers (μm²)",
+      "computation": "Area enclosed within the nuclear contour, measured by pixel count scaled to microns.",
+      "clinical_relevance": "Enlarged nuclear area strongly correlates with mitotic index and aggressive tumors."
+    },
+    {
+      "column_name": "smoothness_mean",
+      "clinical_name": "Nuclear Smoothness (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "contour local variation",
+      "computation": "Local variation in radial lengths measured along the nuclear perimeter.",
+      "clinical_relevance": "Smooth contours characterize normal nuclei; jagged irregular boundaries reflect malignancy."
+    },
+    {
+      "column_name": "compactness_mean",
+      "clinical_name": "Nuclear Compactness (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "dimensionless ratio [perimeter² / area - 1.0]",
+      "computation": "(perimeter^2 / area - 1.0).",
+      "clinical_relevance": "High compactness indicates complex convoluted nuclear borders."
+    },
+    {
+      "column_name": "concavity_mean",
+      "clinical_name": "Nuclear Concavity (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "indentation severity ratio",
+      "computation": "Severity of concave portions (indentations) of the nuclear contour.",
+      "clinical_relevance": "Severe nuclear groove indents and clefts are prominent cytological hallmarks of carcinoma."
+    },
+    {
+      "column_name": "concave_points_mean",
+      "clinical_name": "Number of Concave Points (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "count",
+      "computation": "Number of distinct concave portions along the nuclear contour.",
+      "clinical_relevance": "Higher count of concave notches directly reflects malignant membrane folding."
+    },
+    {
+      "column_name": "symmetry_mean",
+      "clinical_name": "Nuclear Symmetry (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "ratio",
+      "computation": "Relative length differences between perpendicular chords bisecting the nucleus.",
+      "clinical_relevance": "Malignant transformation disrupts nuclear polarity and produces asymmetrical nuclei."
+    },
+    {
+      "column_name": "fractal_dimension_mean",
+      "clinical_name": "Fractal Dimension (Mean)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "dimensionless ratio (coastline approximation)",
+      "computation": "Mandelbrot coastline approximation [fractal dimension - 1.0].",
+      "clinical_relevance": "High fractal dimension indicates complex microscopic boundary irregularities."
+    },
+    {
+      "column_name": "radius_se",
+      "clinical_name": "Cell Nucleus Radius (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "μm (SE)",
+      "computation": "Standard error of nuclear radius across cell population in sample.",
+      "clinical_relevance": "Anisokaryosis (variation in nuclear size between adjacent cells)."
+    },
+    {
+      "column_name": "texture_se",
+      "clinical_name": "Nuclear Texture (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "grayscale variance (SE)",
+      "computation": "Standard error of nuclear texture across cell population in sample.",
+      "clinical_relevance": "Heterogeneity of nuclear staining and chromatin condensation."
+    },
+    {
+      "column_name": "perimeter_se",
+      "clinical_name": "Nuclear Perimeter (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "μm (SE)",
+      "computation": "Standard error of perimeter length across cell population in sample.",
+      "clinical_relevance": "Circumferential size variation across the aspirate."
+    },
+    {
+      "column_name": "area_se",
+      "clinical_name": "Nuclear Area (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "μm² (SE)",
+      "computation": "Standard error of nuclear area across cell population in sample.",
+      "clinical_relevance": "Area variation reflects uncontrolled growth rate variability."
+    },
+    {
+      "column_name": "smoothness_se",
+      "clinical_name": "Nuclear Smoothness (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "local variation (SE)",
+      "computation": "Standard error of perimeter smoothness across cell population in sample.",
+      "clinical_relevance": "Contour variation between cells."
+    },
+    {
+      "column_name": "compactness_se",
+      "clinical_name": "Nuclear Compactness (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "ratio (SE)",
+      "computation": "Standard error of compactness across cell population in sample.",
+      "clinical_relevance": "Shape variability across the aspirate."
+    },
+    {
+      "column_name": "concavity_se",
+      "clinical_name": "Nuclear Concavity (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "indentation ratio (SE)",
+      "computation": "Standard error of concavity across cell population in sample.",
+      "clinical_relevance": "Variation in depth of nuclear indentations."
+    },
+    {
+      "column_name": "concave_points_se",
+      "clinical_name": "Number of Concave Points (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "count (SE)",
+      "computation": "Standard error of concave point count across cell population in sample.",
+      "clinical_relevance": "Variation in notch frequency."
+    },
+    {
+      "column_name": "symmetry_se",
+      "clinical_name": "Nuclear Symmetry (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "ratio (SE)",
+      "computation": "Standard error of symmetry across cell population in sample.",
+      "clinical_relevance": "Asymmetry variance between cells."
+    },
+    {
+      "column_name": "fractal_dimension_se",
+      "clinical_name": "Fractal Dimension (Standard Error)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "dimensionless ratio (SE)",
+      "computation": "Standard error of fractal dimension across cell population in sample.",
+      "clinical_relevance": "Boundary complexity variance."
+    },
+    {
+      "column_name": "radius_worst",
+      "clinical_name": "Cell Nucleus Radius (Worst / Largest)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "micrometers (μm)",
+      "computation": "Mean of the three largest nuclear radii recorded in the sample.",
+      "clinical_relevance": "Isolates the most aggressive / giant tumor cells."
+    },
+    {
+      "column_name": "texture_worst",
+      "clinical_name": "Nuclear Texture (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "grayscale variance",
+      "computation": "Mean of the three most variable texture readings in the sample.",
+      "clinical_relevance": "Isolates maximum nuclear hyperchromasia and chromatin irregularity."
+    },
+    {
+      "column_name": "perimeter_worst",
+      "clinical_name": "Nuclear Perimeter (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "micrometers (μm)",
+      "computation": "Mean of the three largest perimeters recorded in the sample.",
+      "clinical_relevance": "Maximum nuclear perimeter in sample."
+    },
+    {
+      "column_name": "area_worst",
+      "clinical_name": "Nuclear Area (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "square micrometers (μm²)",
+      "computation": "Mean of the three largest nuclear areas recorded in the sample.",
+      "clinical_relevance": "One of the single most discriminative features for invasive malignancy."
+    },
+    {
+      "column_name": "smoothness_worst",
+      "clinical_name": "Nuclear Smoothness (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "local variation",
+      "computation": "Mean of the three worst smoothness values in the sample.",
+      "clinical_relevance": "Maximum membrane jaggedness."
+    },
+    {
+      "column_name": "compactness_worst",
+      "clinical_name": "Nuclear Compactness (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "dimensionless ratio",
+      "computation": "Mean of the three highest compactness values in the sample.",
+      "clinical_relevance": "Extreme boundary distortion."
+    },
+    {
+      "column_name": "concavity_worst",
+      "clinical_name": "Nuclear Concavity (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "indentation severity ratio",
+      "computation": "Mean of the three highest concavity values in the sample.",
+      "clinical_relevance": "Severe nuclear clefts in malignant clones."
+    },
+    {
+      "column_name": "concave_points_worst",
+      "clinical_name": "Number of Concave Points (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "count",
+      "computation": "Mean of the three highest concave point counts in the sample.",
+      "clinical_relevance": "High discriminative power for cytological malignancy."
+    },
+    {
+      "column_name": "symmetry_worst",
+      "clinical_name": "Nuclear Symmetry (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "ratio",
+      "computation": "Mean of the three most asymmetrical nucleus readings in the sample.",
+      "clinical_relevance": "Maximum architectural distortion."
+    },
+    {
+      "column_name": "fractal_dimension_worst",
+      "clinical_name": "Fractal Dimension (Worst)",
+      "data_type": "float64",
+      "role": "feature",
+      "unit": "dimensionless ratio",
+      "computation": "Mean of the three highest fractal dimension readings in the sample.",
+      "clinical_relevance": "Extreme morphological complexity."
+    }
+  ]
+}
